@@ -276,7 +276,6 @@ La fréquence est déterminée par la vitesse de rotation des turbines et le nom
 \section{Principe de fonctionnement}
 Un réacteur nucléaire comprend toujours au moins un cœur où se déroule la réaction de fission nucléaire, des réflecteurs et des moyens de contrôle de la réaction, une cuve métallique, et enfin une enceinte de confinement.
 
-
 Les noyaux atomiques très lourds tels que l'uranium ou le plutonium contiennent énormément de protons, et sont instables. Si l'un de ces atomes très lourd (par exemple l'uranium 235 ou le plutonium 239) capture un neutron, il se transforme en un noyau encore plus instable (${}^{236}U$ ou ${}^{240}Pu$), et récupère par la même occasion de l'énergie.
 
 Le noyau résultant se divise très rapidement: il fissionne, en se divisant en deux noyaux principaux, et en libérant deux ou trois neutrons supplémentaires, libres. Ces neutrons supplémentaires sont disponibles pour d'autres fissions de noyau : c'est le principe de la réaction en chaîne.
@@ -318,7 +317,65 @@ Enfin, l'emploi de matériaux instables et très énergétiques par nature rend 
 
 \section{Implémentation}
 
+
+
+
+
+
+
+
+
+
 \chapter{Le barrage hydroélectrique}
+
+\section{Introduction et utilisation}
+L'énergie hydroélectrique est une source d'énergie renouvelable et relativement propre, même si elle nécessite de gros travaux et des investissements importants.
+
+Environ 16\% de la production mondiale d'électricité, et 13.3\% de la production française, sont dûs à l'hydroélectrique. Il y a en France 399 barrages, d'une capacité totale de \unit[25]{GW}, soit environ \unit[62]{MW} pour un barrage moyen. Avec \unit[196]{GW} de puissance installée, c'est la Chine qui a la plus grosse capacité de production hydroélectrique, devant le Canada et le Brésil. 
+
+\section{Principes de fonctionnement}
+Le terme d'énergie hydroélectrique est relativement vaste et recouvre tous les moyens de produire de l'électricité à partir des réserves d'eau. On trouve principalement deux types de centrales :
+\begin{itemize}
+	\item Les centrales fluviales, qui sont installés soit directement le long d'un fleuve, soit avec un barrage et un lac de retenue. Ces centrales fonctionnent toutes avec des turbo-alternateurs, en forçant l'eau qui s'écoule à passer par des turbines.
+	\item Les centrales maritimes, qui peuvent utiliser l'énergie des courants marins (leur fonctionnement est alors assez similaire à celui d'éoliennes) ou celle de la marée (dans ce cas, elles fonctionnent globalement comme des barrages fluviaux).
+\end{itemize}
+
+Les barrages ont aussi souvent une finalité de contrôle des crues ou du débit des rivières.
+
+\begin{figure}[h]
+	\centering\hspace*{-5mm}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/maremotrice}
+		\caption{Une centrale hydroélectrique marémotrice}
+		\label{fig:maremotrice}
+	\end{minipage}%
+	\hspace*{1cm}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/barrage_coupe}
+		\caption{Coupe d'un barrage hydroélectrique}
+		\label{fig:barrage_coupe}
+	\end{minipage}
+\end{figure}
+
+\section{Avantages et inconvénients}
+L'énergie hydroélectrique, sous toutes ses formes, a l'avantage d'être renouvelable -- elle utilise en fait indirectement l'énergie solaire qui fait s'évaporer l'eau terrestre, pour les barrages, ou le vent qui crée les vagues.
+
+Malgré des coûts de réalisation généralement élevés, les coûts de maintenance sont raisonnables et les installations relativement durables. En revanche, ils doivent de plus être placés dans des zones montagneuses appropriées, qui sont en nombre limité et peuvent être très rares dans certaines parties du monde\textellipsis
+
+Les risques en cas de problèmes structurels sur les barrages hydroélectriques sont très importants : on rappellera par exemple l'accident de Malpasset, en France, où l'écroulement d'un barrage a fait plus de 400 victimes et des dégâts matériels impressionnants (figure \ref{fig:malpasset}). L'exemple du barrage des Trois-Gorges, en Chine, montre aussi les dégâts écologiques qui peuvent être causés par des travaux de barrage, notamment par l'inondation de forêts, le blocage des sédiments, et le blocage des migrations de poissons (bien qu'il soit de plus en plus fréquent d'installer des passages pour saumons dans les barrages).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{img/malpasset.jpg}
+\caption{Les restes du barrage de Malpasset}
+\label{fig:malpasset}
+\end{figure}
+
+Un avantage bien connu des barrages hydroélectriques est aussi celui du stockage de l'énergie par pompages. De nombreuses centrales sont capables d'inverser le fonctionnement de leurs turbo-alternateurs pour pomper l'eau dans le lac de retenue. Le rendement d'une telle opération est d'environ 70 à 80\%. Ceci permet notamment de combler certains inconvénients des sources de production peu adaptables, comme les centrales nucléaires, ou dont la production est difficile à contrôler, comme les éoliennes ou le photovoltaïque.
+
+Les barrages disposent dans tous les cas d'une réactivité énorme puisqu'il suffit d'ouvrir ou de fermer les vannes de la retenue pour arriver à la production maximale ou au contraire l'arrêter totalement. Les centrales marémotrices n'ont pas cette faculté mais ont toutefois l'avantage d'être extrêmement régulières, encore une fois au contraire de la majorité des autres sources d'énergie renouvelables.
 
 \nocite{*}
 \printbibliography
