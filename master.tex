@@ -14,6 +14,8 @@
 \usepackage{ifdraft}
 \usepackage{units}
 \usepackage{booktabs}
+\usepackage{biblatex}
+\bibliography{master}
 %\usepackage[pdfpagelabels,draft,implicit=false]{hyperref}
 
 %Tkiz
@@ -272,11 +274,52 @@ La fréquence est déterminée par la vitesse de rotation des turbines et le nom
 \chapter{La centrale nucléaire}
 
 \section{Principe de fonctionnement}
+Un réacteur nucléaire comprend toujours au moins un cœur où se déroule la réaction de fission nucléaire, des réflecteurs et des moyens de contrôle de la réaction, une cuve métallique, et enfin une enceinte de confinement.
+
+
+Les noyaux atomiques très lourds tels que l'uranium ou le plutonium contiennent énormément de protons, et sont instables. Si l'un de ces atomes très lourd (par exemple l'uranium 235 ou le plutonium 239) capture un neutron, il se transforme en un noyau encore plus instable (${}^{236}U$ ou ${}^{240}Pu$), et récupère par la même occasion de l'énergie.
+
+Le noyau résultant se divise très rapidement: il fissionne, en se divisant en deux noyaux principaux, et en libérant deux ou trois neutrons supplémentaires, libres. Ces neutrons supplémentaires sont disponibles pour d'autres fissions de noyau : c'est le principe de la réaction en chaîne.
+
+La différence d'énergie de liaison est partiellement transformée en énergie cinétique des produits de fission. Ceux-ci donnent cette énergie sous forme de chaleur par des chocs sur le matériau environnant. Cette chaleur est évacuée à l'aide d'un réfrigérant et peut, par exemple, être utilisée pour le chauffage ou la production d'électricité. 
+
+Les nouveaux noyaux issus de la division sont appelés produits de fission. Ils présentent généralement un excès de neutrons, et tendent à être radioactifs avec une radioactivité $\beta^{-1}$. Quand cette radioactivité $\beta^{-1}$ a été exprimée, ils possèdent globalement une énergie de liaison plus importante par nucléon que les anciens atomes lourds — et donc sont plus stables.
+
+Le fonctionnement est illustré figure \ref{centrale}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/centrale.png}
+	\caption{Schéma d'une centrale de type REP (réacteur à eau pressurisée)}
+	\label{centrale}
+\end{figure}
+
 \section{Différents types de réacteurs nucléaires}
-\section{Avantages er inconvénient}
+\section{Avantages et inconvénients}
+
+\subsection{Avantages}
+L'énergie nucléaire présente plusieurs avantages majeurs par rapport aux autres sources d'énergie. Une centrale nucléaire est capable de produire de l'énergie en continu pendant longtemps, et est très peu affectée par des contingences extérieures telle la météo, contrairement à la plupart des énergies renouvelables (qui dépendent du vent, de l'ensoleillement etc.).
+
+Un autre argument en faveur de l'énergie nucléaire est son prix compétitif. En effet elles sont peu chères par rapport à d'autres sources d'énergie.
+
+Les rejets sont pus faibles que les sources d'énergie fossiles. En effet, la fumée provenant des cheminées de centrales nucléaire est en fait de la vapeur d'eau provenant des tours de refroidissement. 
+
+Les centrales nucléaires rejettent de la vapeur d'eau encore chaude, donc ce type de centrale est très adapté à la cogénération.
+
+
+\subsection{Inconvénients}
+Le premier inconvénient de l'énergie nucléaire est la production de déchets radioactifs. Ces déchets doivent être transportés puis stockées dans un lieu sur pendant longtemps.
+
+La durée de construction d'une centrale nucléaire est de 10 ans, et sa durée de fonctionnement n'est que de 30 à 40 ans.
+
+De plus, la production d'énergie nucléaire est difficilement adaptable à la demande d'énergie et à ses fluctuations journalières et hebdomadaires. En effet, les centrales nucléaires présentent une inertie importante en ce qui concerne la modification de la quantité d'énergie produite. Un barrage hydraulique peut, au contraire, ouvrir ou fermer les vannes en quelques minutes.
+
+Enfin, l'emploi de matériaux instables et très énergétiques par nature rend cette forme de production d'énergie particulièrement dangereuse. Des accidents majeurs, tels Chernobyl ou plus récemment Fukushima nous rappellent les dangers de cette technologie.
+
 \section{Implémentation}
 
 \chapter{Le barrage hydroélectrique}
 
-
+\nocite{*}
+\printbibliography
 \end{document}
