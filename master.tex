@@ -1,0 +1,110 @@
+\documentclass[12pt,a4paper,oneside,openany]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+
+% Paquets utiles
+\usepackage{graphicx}
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{asymptote}
+\usepackage{flafter}
+\usepackage{multirow}
+\usepackage{ifdraft}
+%\usepackage[pdfpagelabels,draft,implicit=false]{hyperref}
+
+%Tkiz
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+
+
+% Décoration
+\usepackage[lighttt]{lmodern} % pour le tt
+
+
+% POUR MATHDESIGN : restaurer hrulefill
+\let\xhrf\hrulefill
+\usepackage[utopia]{mathdesign}
+\let\hrulefill\xhrf
+\renewcommand*{\chapterheadstart}{\begingroup
+	\vspace*{\beforechapskip}%
+	\begin{adjustwidth}{}{-\chapindent}%
+		\hrulefill
+		\smash{\rule{0.4pt}{15mm}}
+	\end{adjustwidth}\endgroup}
+%\usepackage{tgpagella}
+\let\mathbb\relax \usepackage{bbold}
+\fixpdflayout
+%\counterwithout{section}{chapter}
+%\setsecnumdepth{subsection}
+
+
+\chapterstyle{ell}
+\setsecheadstyle{\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\large\bfseries\sffamily\raggedright}
+\midsloppy
+
+\makepagestyle{myruled}
+\makeoddfoot{myruled}{}{\thepage}{}
+\makeevenfoot{myruled}{}{\thepage}{}
+\makeheadrule{myruled}{\textwidth}{\normalrulethickness}
+\makeevenhead{myruled}{\rightmark}{}{}
+\makeoddhead{myruled}{\rightmark}{}{}
+\pagestyle{myruled}
+
+\captiondelim{ : }
+\captiontitlefont{\sffamily}
+
+\newsubfloat{figure}
+\newsubfloat{table}
+
+\newcommand{\anonchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{\numberline{}#1}}
+\newcommand{\todo}[1]{\marginpar{\textcolor{red}{#1}}}
+\newcommand{\fltbrule}{\hrule\vspace{\onelineskip}}
+\newcommand{\fltarule}{\vspace{\onelineskip}
+	\hrule\vspace{\onelineskip}}
+
+\author{Matthieu Félix}
+\title{Rapport de stage opérateur}
+\date{Juin-juillet 2015}
+
+
+% EXEMPLES & référence rapide
+% dessin asymptote
+% \lstinputlisting[firstline=, lastline=]{fichier}
+
+\begin{document}
+	
+% Page de titre
+\keepthetitle
+\begin{titlingpage}
+\noindent
+\begin{minipage}[t]{0.4\textwidth} \begin{flushleft}
+\theauthor \\ Promotion 2017 \\ \thedate
+\end{flushleft} \end{minipage}
+\begin{minipage}[t]{0.4\textwidth} \begin{flushright}
+Garage du Massif
+\end{flushright} \end{minipage}
+
+\vspace{3cm}
+\begin{center}
+{\LARGE \textsc{\thetitle}}
+\ifdraft{\par Brouillon}{}
+\end{center}
+\vspace{3cm}
+
+\noindent
+Durée : du 15 juin au 24 juillet 2015 \\
+Lieu : Les Rousses, Jura \\
+Responsable du stage : Georges Lourreiro
+\end{titlingpage}
+
+\addtolength{\marginparwidth}{11mm}
+\abnormalparskip{4mm}
+
+\clearpage
+
+
+\end{document}
